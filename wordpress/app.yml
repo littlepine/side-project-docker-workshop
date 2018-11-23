@@ -1,0 +1,41 @@
+wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+mariadb:
+  image: mariadb
+  environment:
+    MYSQL_DATABASE: exampledb
+    MYSQL_USER: exampleuser
+    MYSQL_PASSWORD: examplepass
+  expose:
+   - "3306"
+# db:
+#     image: mysql:5.7
+#     restart: always
+#     expose:
+#       - "3306"
+#     environment:
+#       MYSQL_DATABASE: exampledb
+#       MYSQL_USER: exampleuser
+#       MYSQL_PASSWORD: examplepass
+#       MYSQL_RANDOM_ROOT_PASSWORD: '1'
+
+
+
+# phpmyadmin:
+#   image: nazarpc/phpmyadmin
+#   links:
+#    - mariadb:mysql
+#   environment:
+#    - UPLOAD_SIZE=1G
+#   # expose:
+#   #  - "443"
+#   ports:
+#    - "8083:443"
