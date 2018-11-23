@@ -8,3 +8,7 @@ The presentation slide can be downloaded [here](https://docs.google.com/presenta
 
 ## Workshop
 The workshop will setup an typical wordpress + MariaDB architecture.
+
+## Join telegram Group
+
+[Join Our telegrame Group here](https://t.me/joinchat/Cf4A3lBOPsM12uonfdNyqw)
